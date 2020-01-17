@@ -1,0 +1,37 @@
+body{
+    background-color: black;
+}
+
+#grid-container{
+    height: 60px;
+    width: 800px;
+    display: grid;
+    grid-template-columns: auto auto auto  ;
+    position: absolute;
+    background-color: #F7B538;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container:hover{
+    background-color: #F7B538;
+}
+
+.container {
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 260px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0 20; 
+    font-size: 30px;
+  }
+
+.align{
+    padding-top: 525px;
+    padding-left: 230px;
+}
