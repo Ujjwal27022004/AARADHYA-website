@@ -1,0 +1,66 @@
+body {
+    background-color: #360722;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+hr {
+    position: relative;
+    top: -38px; /* 80 */
+    z-index: 1;
+}
+.navbar-toggler-custom {
+    height: 45px;
+    width: 45px;
+    z-index: 9999;
+    position: absolute;
+  }
+.navigator {
+    position: relative;
+    background-color: #0e1020;
+    border-width: 1.2px;
+    z-index: 10;
+    font-family: 'Trebuchet MS';
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.navigator:hover {
+    background-color: #7a1050;
+    color: white!important;
+    letter-spacing: 0.1px;
+}
+.active_navigator {
+    background-color: #971463;
+    color: white!important;
+}
+#header {
+    background: inherit;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.bg-blue {
+    background-color: #0e1020;
+}
+.bg-violet {
+    background-color: #6d0e47; /*#971463*/
+}
+.event_container + .event_tagline {
+    font-family: 'Lato';
+    font-style: italic;
+    text-align: center;
+    position: relative;
+    top: -120px;
+    z-index: -1;
+}
+.event_container:hover + .event_tagline {
+    top: 0;
+    transition: 0.4s;
+}
+.alegreya {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+a:hover {
+    text-decoration: none;
+}

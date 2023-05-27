@@ -1,0 +1,66 @@
+html {
+    scroll-behavior: smooth;
+}  
+
+body {
+    background-image: radial-gradient(#5a0c3b, #0e1020);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-blue {
+    background-color: #0e1020;
+}
+
+.responsive {
+    font-size: 5rem;
+}
+
+@media (max-width: 1200px) {
+    .responsive {
+        font-size: calc(1.6rem + 6vw);
+    }
+}
+
+.sponsor-heading {
+    font-size: 4rem;
+}
+
+@media (max-width: 1200px) {
+    .sponsor-heading {
+        font-size: calc(1.5rem + 5vw);
+    }
+}
+
+.alegreya {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.sponsers-bg {
+    height: 250px;
+    width: 350px;
+    background-color: white;
+}
+
+/* Footer Classes */
+
+#footer {
+    background-color: #0e1020;
+}
+
+#back_to_top {
+    height: 20px;
+    width: 20px;
+    opacity: 0.8;
+    animation: opace 2s infinite;
+}
+
+@keyframes opace {
+    50% {opacity: 0.3;}
+}
+
+a, a:hover {
+    color: inherit;
+}

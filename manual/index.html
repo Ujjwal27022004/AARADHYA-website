@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Registration Manual Entries</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #334766;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container p-4 p-sm-5">
+
+    <div class="container rounded bg-light p-lg-5 p-3">
+
+      <h4 class="h2 text-center mt-3 mb-5">Manual Entries</h4>
+
+      <form class="needs-validation" novalidate action="register.php" method="POST">
+
+        <!-- Name -->
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="fname" required>
+            <div class="invalid-feedback">
+              Please provide your first name.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="lname" required>
+            <div class="invalid-feedback">
+              Please provide your last name.
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="email">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+            <div class="invalid-feedback">
+              Please provide your e-mail.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="phone_no">Phone No.</label>
+            <input type="tel" class="form-control" id="phone_no" pattern="[6-9]{1}[0-9]{9}" name="phone" required>
+            <div class="invalid-feedback">
+              Please provide your phone number.
+            </div>
+          </div>
+        </div>
+
+        <!-- College -->
+        <div class="form-group">
+          <label for="college">College</label>
+          <input type="text" class="form-control" id="college" name="college" required>
+          <div class="invalid-feedback">
+            Please provide your college.
+          </div>
+        </div>
+
+        <!-- Event -->
+        <div class="form-group">
+          <label for="event">Competition / Workshop</label>
+          <select class="custom-select" id="event" name="event" required>
+            <option selected disabled value="">Choose...</option>
+
+            <option disabled></option>
+            <option class="h5" disabled>Non-Technical Events</option class="h5">
+            <option value="born_psychos">&nbsp;&nbsp;&nbsp;&nbsp;Born Psychos</option>
+            <option value="cric_bash">&nbsp;&nbsp;&nbsp;&nbsp;Cric Bash</option>
+            <option value="food_o_holic">&nbsp;&nbsp;&nbsp;&nbsp;Food-O-Holic</option>
+            <option value="open_mic">&nbsp;&nbsp;&nbsp;&nbsp;Eccentrics</option>
+            <option value="respawn" id="respawn">&nbsp;&nbsp;&nbsp;&nbsp;Respawn</option>
+            <option value="vaad_vivaad" id="vaad_vivaad">&nbsp;&nbsp;&nbsp;&nbsp;Vaad-Vivaad</option>
+            <option value="virtual_placement">&nbsp;&nbsp;&nbsp;&nbsp;Virtual Placement</option>
+
+            <option disabled></option>
+            <option class="h5" disabled>Technical Events</option>
+            <option value="avishkar">&nbsp;&nbsp;&nbsp;&nbsp;Avishkar</option>
+            <option value="bridge_o_craft">&nbsp;&nbsp;&nbsp;&nbsp;Bridge-O-Craft</option>
+            <option value="explique'o_code">&nbsp;&nbsp;&nbsp;&nbsp;Explique'O Code</option>
+            <option value="ravic">&nbsp;&nbsp;&nbsp;&nbsp;Ravic</option>
+            <option value="robo_soccer">&nbsp;&nbsp;&nbsp;&nbsp;Robo-Soccer</option>
+
+            <option disabled></option>
+            <option class="h5" disabled>Workshops</option>
+            <option value="ai_ml">&nbsp;&nbsp;&nbsp;&nbsp;AI-ML Workshop</option>
+            <option value="ic_engine">&nbsp;&nbsp;&nbsp;&nbsp;IC Engine</option>
+            <option value="stargaze">&nbsp;&nbsp;&nbsp;&nbsp;Stargaze</option>
+            <option value="total_station" id="total_station">&nbsp;&nbsp;&nbsp;&nbsp;Total Station</option>
+            <option value="Workflow">&nbsp;&nbsp;&nbsp;&nbsp;Workflow</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a competiton or workshop.
+          </div>
+        </div>
+
+        <!-- Games -->
+        <div class="form-group d-none" id="games">
+          <label for="game">Game</label>
+          <select class="custom-select" id="game" name="game">
+            <option selected disabled value="">Choose...</option>
+            <option value="pubg">&nbsp;&nbsp;&nbsp;&nbsp;PUBG</option>
+            <option value="csgo">&nbsp;&nbsp;&nbsp;&nbsp;CS:GO</option>
+            <option value="fifa">&nbsp;&nbsp;&nbsp;&nbsp;FIFA</option>
+          </select>
+          <div class="invalid-feedback">Please select a game.</div>
+        </div>
+
+        <!-- Category Selection -->
+        <div id="options">
+
+          <div class="form-group d-none" id="category_field">
+            <label for="category">Category</label>
+            <select class="custom-select" id="category" name="category">
+              <option selected disabled value="">Choose...</option>
+              <option value="single">&nbsp;&nbsp;&nbsp;&nbsp;Single</option>
+              <option value="double">&nbsp;&nbsp;&nbsp;&nbsp;Double</option>
+            </select>
+            <div class="invalid-feedback">Please select a category.</div>
+          </div>
+
+          <div class="form-group d-none" id="category_pubg_field">
+            <label for="category">Category</label>
+            <select class="custom-select" id="category_pubg" name="category_pubg">
+              <option selected disabled value="">Choose...</option>
+              <option value="solo">&nbsp;&nbsp;&nbsp;&nbsp;Solo</option>
+              <option value="squad">&nbsp;&nbsp;&nbsp;&nbsp;Squad</option>
+              <option value="custom">&nbsp;&nbsp;&nbsp;&nbsp;Classic + Custom Room</option>
+            </select>
+            <div class="invalid-feedback">Please select a category.</div>
+          </div>
+
+          <div class="form-group d-none" id="category_fifa_field">
+            <label for="category">Category</label>
+            <select class="custom-select" id="category_fifa" name="category_fifa">
+              <option selected disabled value="">Choose...</option>
+              <option value="solo">&nbsp;&nbsp;&nbsp;&nbsp;Solo</option>
+              <option value="duo">&nbsp;&nbsp;&nbsp;&nbsp;Duo</option>
+            </select>
+            <div class="invalid-feedback">Please select a category.</div>
+          </div>
+
+        </div>
+
+        <!-- No of Team Members -->
+        <div class="form-group d-none" id="no_of_team_members_field">
+          <label for="no_of_team_members">Number of Team Members</label>
+          <select class="custom-select" id="no_of_team_members" name="no_of_team_members">
+          </select>
+          <div class="invalid-feedback">Please select number of team members.</div>
+        </div>
+
+        <!-- Team Members -->
+        <div id="team_members"></div>
+
+        <!-- Transatction -->
+        <div class="form-row">
+          <div class="col-md-6 mb-3">
+            <label for="txn">Payment Status</label>
+            <input type="text" class="form-control" name="txn" value="CASH" readonly>
+            <div class="invalid-feedback">
+              Please provide your Transatction ID.
+            </div>
+          </div>
+
+        </div>
+
+        <button class="col-12 btn btn-primary my-3" type="submit" value="sub" name="submit">Submit</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
+  <script>
+    var event = document.getElementById("event");
+    var games = document.getElementById("games");
+    var game = document.getElementById("game");
+    var category = document.getElementById("category");
+    var category_field = document.getElementById("category_field");
+    var category_pubg = document.getElementById("category_pubg");
+    var category_pubg_filed = document.getElementById("category_pubg_field");
+    var category_fifa = document.getElementById("category_fifa");
+    var category_fifa_filed = document.getElementById("category_fifa_field");
+    var no_of_team_members = document.getElementById("no_of_team_members");
+    var no_of_team_members_field = document.getElementById("no_of_team_members_field")
+    var team_members = document.getElementById("team_members");
+    var no_of_members = {
+      // Non-tecnical
+      'born_psychos': 5,
+      'cric_bash': 6,
+      'food_o_holic': 4,
+      'respawn_pubg_squad': 4,
+      'respawn_pubg_custom': 4,
+      'respawn_csgo': 5,
+      'respawn_fifa_duo': 2,
+      'vaad_vivaad_double': 2,
+
+      // Technical
+      'avishkar': 5,
+      'bridge_o_craft': 5,
+      "explique'o_code": 5,
+      'ravic': 4,
+      'robo_soccer': 5,
+
+      // Workshop
+      'total_station_double': 2
+    }
+    var init = function () {
+      games.classList.add("d-none");
+      game.required = false;
+      category_field.classList.add("d-none");
+      category.required = false;
+      category_pubg_field.classList.add("d-none");
+      category_pubg.required = false;
+      category_fifa_field.classList.add("d-none");
+      category_fifa.required = false;
+      no_of_team_members_field.classList.add("d-none");
+      no_of_team_members.required = false;
+      no_of_team_members.innerHTML = '';
+      team_members.innerHTML = '';
+    }
+    var showNoOfTeamMembersField = function () {
+      no_of_team_members.innerHTML = '<option selected disabled value="">Choose</option>';
+      for (var i = 1; i <= no_of_members[event.value]; i++) {
+        no_of_team_members.innerHTML += '<option value="' + i + '">' + i + '</option>';
+      }
+      no_of_team_members.required = true;
+      no_of_team_members_field.classList.remove("d-none");
+    };
+    var addTeamMembersFields = function () {
+      if (event.value in no_of_members) {
+        team_members.innerHTML = '<p class="h4 text-center mt-5">Team Members</p>';
+        for (var i = 1; i < no_of_team_members.value; i++) {
+          team_members.innerHTML += '<label for="team_member_' + i + '" class="mt-2">Team Member ' + i +
+            '</label><div class="card p-4 mb-3" id="team_member_' + i +
+            '"><div class="form-row"><div class="col-md-6 mb-3"><label for="name_' + i +
+            '">Name</label><input type="text" class="form-control bg-light" id="first_name_' + i +
+            '" name="member_name' + i +
+            '" required><div class="invalid-feedback">Please provide your first name.</div></div><div class="form-row"><div class="col-md-6 mb-3"><label for="email_' +
+            i + '">E-mail</label><input type="email" class="form-control bg-light" id="email_' + i +
+            '" name="email_' + i +
+            '" required><div class="invalid-feedback">Please provide your e-mail.</div></div><div class="col-md-6 mb-3"><label for="phone_no_' +
+            i + '">Phone No.</label><input type="tel" class="form-control bg-light" id="phone_no_' + i +
+            '" pattern="[6-9]{1}[0-9]{9}" name="phone_no_' + i +
+            '" required><div class="invalid-feedback">Please provide your phone number.</div></div></div></div>';
+        }
+      } else {
+        team_members.innerHTML = '';
+      }
+    }
+
+    event.addEventListener("input", function () {
+      init();
+      if (['vaad_vivaad', 'vaad_vivaad_single', 'vaad_vivaad_double', 'total_station', 'total_station_single',
+          'total_station_double'
+        ].includes(event.value)) {
+        category_field.classList.remove("d-none");
+        category.required = true;
+        games.classList.add("d-none");
+        game.required = false;
+      } else if (event.value == 'respawn') {
+        games.classList.remove("d-none");
+        game.required = true;
+        category_field.classList.add("d-none");
+        category.required = false;
+      } else {
+        category_field.classList.add("d-none");
+        category.required = false;
+        games.classList.add("d-none");
+        game.required = false;
+        if (event.value in no_of_members)
+          showNoOfTeamMembersField();
+        else
+          no_of_team_members.innerHTML = '<option value="1" selected></option'
+      }
+    });
+
+    game.addEventListener("input", function () {
+      no_of_team_members_field.classList.add("d-none");
+      no_of_team_members.required = false;
+      no_of_team_members.innerHTML = '';
+      team_members.innerHTML = '';
+      if (this.value == 'pubg') {
+        category_pubg_field.classList.remove("d-none");
+        category_pubg.required = true;
+        category_fifa_field.classList.add("d-none");
+        category_fifarequired = false;
+      } else if (this.value == 'fifa') {
+        category_fifa_field.classList.remove("d-none");
+        category_fifa.required = true;
+        category_pubg_field.classList.add("d-none");
+        category_pubg.required = false;
+      } else if (this.value == 'csgo') {
+        category_pubg_field.classList.add("d-none");
+        category_pubg.required = false;
+        category_fifa_field.classList.add("d-none");
+        category_fifa.required = false;
+        document.getElementById("respawn").value = 'respawn_csgo';
+        showNoOfTeamMembersField();
+      }
+    });
+
+    category.addEventListener("input", function () {
+      team_members.innerHTML = '';
+      if (event.value == 'vaad_vivaad' || event.value == 'vaad_vivaad_single' || event.value ==
+        'vaad_vivaad_double')
+        document.getElementById('vaad_vivaad').value = 'vaad_vivaad_' + category.value;
+      else
+        document.getElementById('total_station').value = 'total_station_' + category.value;
+      if (category.value == 'double')
+        no_of_team_members.innerHTML = '<option value="2" selected></option';
+      else if (category.value = 'single')
+        no_of_team_members.innerHTML = '<option value="1" selected></option';
+      addTeamMembersFields();
+    });
+
+    category_pubg.addEventListener("input", function () {
+      team_members.innerHTML = '';
+      document.getElementById('respawn').value = 'respawn_' + game.value + "_" + category_pubg.value;
+      if (category_pubg.value == 'solo') {
+        no_of_team_members.innerHTML = '<option value="1" selected></option';
+        addTeamMembersFields();
+      } else if (category_pubg.value == 'squad' || category_pubg.value == 'custom')
+        showNoOfTeamMembersField();
+    });
+
+    category_fifa.addEventListener("input", function () {
+      team_members.innerHTML = '';
+      document.getElementById('respawn').value = 'respawn_' + game.value + "_" + category_fifa.value;
+      if (category_fifa.value == 'solo')
+        no_of_team_members.innerHTML = '<option value="1" selected></option';
+      else if (category_fifa.value = 'duo')
+        no_of_team_members.innerHTML = '<option value="2" selected></option';
+      addTeamMembersFields();
+    });
+
+    no_of_team_members.addEventListener("input", addTeamMembersFields);
+  </script>
+  
+
+</body>
+
+</html>

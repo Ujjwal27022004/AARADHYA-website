@@ -1,0 +1,53 @@
+html {
+    scroll-behavior: smooth;
+}    
+body {
+    height: 100%;
+    background-image: url("../images/gallery_bg.jpg");
+    background-attachment: fixed ;
+    background-size: cover;
+    background-position: center;
+}
+.navbar-toggler-custom {
+    height: 45px;
+    width: 45px;
+    z-index: 9999;
+    position: absolute;
+}
+.parent {
+    padding: 0;
+    overflow: hidden;
+}
+.parent:hover .child,
+.parent:focus .child {
+    transform: scale(1.1);
+    transition: all 1s;
+}
+.bg-blue {
+    background-color: #0e1020;
+}
+
+/* Footer Classes */
+
+#footer {
+  background-color: #0e1020;
+}
+
+#back_to_top {
+    height: 20px;
+    width: 20px;
+    opacity: 0.8;
+    animation: opace 2s infinite;
+}
+
+@keyframes opace {
+    50% {opacity: 0.3;}
+}
+
+a, a:hover {
+  color: inherit;
+}
+
+.alegreya {
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
